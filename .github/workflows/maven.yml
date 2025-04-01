@@ -36,6 +36,6 @@ jobs:
         image: jobinjek2020/lms-github-action
         tags: latest
         registry: docker.io
-        dockerfile: Dockerfile
+        dockerfile: configserver/configserver/Dockerfile
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
