@@ -27,6 +27,9 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
         cache: maven
+    - name: Build with Maven
+      working-directory: configserver/configserver
+      run: mvn clean install
     - name: Build & push Docker image
       uses: mr-smithers-excellent/docker-build-push@v6
       with:
