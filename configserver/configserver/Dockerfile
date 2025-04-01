@@ -1,6 +1,6 @@
 FROM openjdk:17-ea-slim AS build
 WORKDIR /app
-ARG JAR_FILE=target/configserver-application.jar
+ARG JAR_FILE=target/*.jar
 COPY $JAR_FILE configserver-application.jar
 RUN java -Djarmode=layertools -jar configserver-application.jar extract
 
